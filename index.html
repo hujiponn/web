@@ -1,65 +1,122 @@
 <!DOCTYPE html>
-<html lang="JA">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>レジメサイト</title>
+    <!-- ここでGoogleフォントを読み込ませる -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         *{
-            margin: 0;
-            padding: 0;
-        }
-        .top{background-image: url(avocado-8498520_1920.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-        text-align: center;}
-        .prof{background-color: aqua;}
-        section{height: 100vh;}
-        .dela-gothic-one-regular {
-  font-family: "Dela Gothic One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    margin:0;
+    padding:0;
 }
-.top h1{
-    font-size: 8rem;
-    color: aqua;
-    padding-top: 30vh;
-    animation: 藤田ダイキン 3s forwards;
-    opacity: 0;
-    
-    
+:root{
+    --bg:var(--bg)
 }
-@keyframes 藤田ダイキン {
-0%{
-    opacity: 0;
-    transform:  translateY(100px);
-    transform: scale(1.8);
-    color: #002;
-
-}
-100%{
+header{position: relative;
+margin:.5rem ;}
+header video{
+    object-fit:cover ;
+    object-position: center top;
     opacity: 1;
-    transform: translateY(0px);
 }
-.prof h2{
-    font-size: 8rem;
-    color: aqua;
-    padding-top: 30vh;
-    animation: .prof 3s forwards;
-    opacity: 0;
+.header-text{
+    position: absolute;
+    top: 0;;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 }
+.header-pattern{
+    position: absolute;
+    z-index:1 ;
+    background-size: auto auto;
+    background-size:repiting-linear-gradient(0deg,tranceparent,2px,var(--bg)2px,var(--bg)4px) ;
 }
+
+.header-text, header video{
+    width: 100vw;
+    height: 90vh;
+}
+.top{
+   
+    text-align: center;
+}
+.prof{
+    background-color: #515151;
+    text-align: center;
+}
+section{
+    height:100vh;
+}
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+h1{
+    font-size: 6rem;
+    color: #ffffff;
+    animation:hujita 3s forwards;
     opacity: 0;
+}
+
+.prof h2{
+    font-size: 5rem;
+    color: #fff;
+    padding-top: 10vh;
+}
+.box {
+    width: 60vw;
+    height: 60vh;
+    background-color: #ed5959;
+    color: #fff;
+    margin: 0 auto;
+}
+@keyframes hujita {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        transform: scale(1.8);
+        color:rgb(156, 255, 250);
+    }
+}
+@keyframes op {
+    0%{
+        transform: translateY(0);
+        transform-origin: top;
+    }
+    100%{
+        transform: translateY(0);
+        transform-origin: bottom;
+    }
+}
     </style>
 </head>
 <body>
-<section class="top">
-<h1 class="dela-gothic-one-regula">藤田ダイキン</h1>
- </section>  
+<header>
+    <h1 class="header-text center">hujita Gallery</h1>
+    <div class="header-pattern"></div>
+    <video src="top.mp4/28707-371213524_small.mp4" autoplay loop muted></video>
+</header>
+
 <section class="prof">
-    <h2 class="dela-gothic-one-regula">prof</h2>
-    <div class="box"></div>
+    <h2 class="pacifico-regular">Profile</h2>
+    <div class="box">
+        ここにプロフィールを書いていく。
+        色々と更新していく。
+    </div>
 </section>
 </body>
 </html>
